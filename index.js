@@ -19,4 +19,4 @@ app.listen(8800, () => {
 app.get('/', listarLivros);
 app.post('/cadastrar', cadastrarLivro);
 app.put('/alterar', alterarLivro);
-app.get('/deletar/:id', deletarLivro);
+app.delete('/deletar/:id', deletarLivro);
