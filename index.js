@@ -10,6 +10,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+const port = process.env.PORT || 8800;
+
 app.listen(8800, () => {
     console.log('Servidor Iniciado ...');
 });
