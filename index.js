@@ -16,7 +16,7 @@ app.listen(8800, () => {
     console.log('Servidor Iniciado ...');
 });
 
-app.get('/', listarLivros);
-app.post('/cadastrar', cadastrarLivro);
-app.put('/alterar', alterarLivro);
-app.delete('/deletar/:id', deletarLivro);
+app.get('/listarlivros', listarLivros);
+app.post('/cadastrarlivro', cadastrarLivro);
+app.put('/alterarlivro', alterarLivro);
+app.delete('/deletarlivro/:id', deletarLivro);
