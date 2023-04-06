@@ -6,6 +6,8 @@ import listarLivros from './controller/ListarLivros.js';
 import deletarLivro from './controller/DeletarLivro.js';
 import alterarLivro from './controller/AlterarLivro.js';
 
+import listarIrmaos from './controller/ListarIrmaos.js';
+
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -20,3 +22,5 @@ app.get('/listarlivros', listarLivros);
 app.post('/cadastrarlivro', cadastrarLivro);
 app.put('/alterarlivro', alterarLivro);
 app.delete('/deletarlivro/:id', deletarLivro);
+
+app.get('/listarirmaos', listarIrmaos);
