@@ -7,6 +7,7 @@ import deletarLivro from './controller/DeletarLivro.js';
 import alterarLivro from './controller/AlterarLivro.js';
 
 import listarIrmaos from './controller/ListarIrmaos.js';
+import cadastrarIrmao from './controller/CadastrarIrmao.js';
 
 const app = express();
 app.use(express.json());
@@ -24,3 +25,4 @@ app.put('/alterarlivro', alterarLivro);
 app.delete('/deletarlivro/:id', deletarLivro);
 
 app.get('/listarirmaos', listarIrmaos);
+app.post('/cadastrarirmao', cadastrarIrmao);
