@@ -7,6 +7,7 @@ import deletarLivro from './controller/DeletarLivro.js';
 import alterarLivro from './controller/AlterarLivro.js';
 
 import listarIrmaos from './controller/ListarIrmaos.js';
+import buscarIrmaos from './controller/BuscarIrmaos.js';
 import cadastrarIrmao from './controller/CadastrarIrmao.js';
 import deletarIrmao from './controller/DeletarIrmao.js';
 import alterarIrmao from './controller/AlterarIrmao.js';
@@ -27,6 +28,7 @@ app.put('/alterarlivro', alterarLivro);
 app.delete('/deletarlivro/:id', deletarLivro);
 
 app.get('/listarirmaos', listarIrmaos);
+app.get('/buscarirmaos/:iniciais', buscarIrmaos);
 app.post('/cadastrarirmao', cadastrarIrmao);
 app.put('/alterarirmao', alterarIrmao);
 app.delete('/deletarirmao/:id', deletarIrmao);
