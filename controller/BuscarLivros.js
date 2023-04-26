@@ -1,12 +1,12 @@
 import banco from '../db.js';
 
-const buscarIrmaos = (req, res) => {
+const buscarLivros = (req, res) => {
     const iniciais = req.params.iniciais;
 
     if (iniciais == '*') {
-        var query = "SELECT * FROM irmaos ORDER BY nome;";
+        var query = "SELECT * FROM livros ORDER BY titulo;";
     } else {
-        var query = "SELECT * FROM irmaos WHERE nome LIKE '" + iniciais + "%' ORDER BY nome;";
+        var query = "SELECT * FROM livros WHERE titulo LIKE '" + iniciais + "%' ORDER BY titulo;";
     };
 
     banco.query(query, (erro, data) => {
@@ -15,4 +15,4 @@ const buscarIrmaos = (req, res) => {
     })
 };
 
-export default buscarIrmaos;
+export default buscarLivros;

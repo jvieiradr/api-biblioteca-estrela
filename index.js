@@ -3,6 +3,7 @@ import cors  from 'cors';
 
 import cadastrarLivro from './controller/CadastrarLivro.js';
 import listarLivros from './controller/ListarLivros.js';
+import buscarLivros from './controller/BuscarLivros.js';
 import deletarLivro from './controller/DeletarLivro.js';
 import alterarLivro from './controller/AlterarLivro.js';
 
@@ -23,6 +24,7 @@ app.listen(8800, () => {
 });
 
 app.get('/listarlivros', listarLivros);
+app.get('/buscarlivros/:iniciais', buscarLivros);
 app.post('/cadastrarlivro', cadastrarLivro);
 app.put('/alterarlivro', alterarLivro);
 app.delete('/deletarlivro/:id', deletarLivro);
