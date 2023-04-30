@@ -13,6 +13,12 @@ import cadastrarIrmao from './controller/CadastrarIrmao.js';
 import deletarIrmao from './controller/DeletarIrmao.js';
 import alterarIrmao from './controller/AlterarIrmao.js';
 
+import cadastrarEmprestimo from './controller/CadastrarEmprestimo.js';
+import listarEmprestimos from './controller/ListarEmprestimos.js';
+import devolverLivro from './controller/DevolverLivro.js';
+import emprestarLivro from './controller/EmprestarLivro.js';
+import deletarEmprestimo from './controller/DeletarEmprestimo.js';
+
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -34,3 +40,9 @@ app.get('/buscarirmaos/:iniciais', buscarIrmaos);
 app.post('/cadastrarirmao', cadastrarIrmao);
 app.put('/alterarirmao', alterarIrmao);
 app.delete('/deletarirmao/:id', deletarIrmao);
+
+app.post('/cadastraremprestimo', cadastrarEmprestimo);
+app.get('/listaremprestimos', listarEmprestimos);
+app.put('/devolverlivro', devolverLivro);
+app.put('/emprestarlivro', emprestarLivro);
+app.delete('/deletaremprestimo/:id', deletarEmprestimo)
