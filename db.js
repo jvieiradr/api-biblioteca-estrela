@@ -1,4 +1,4 @@
-import mysql from 'mysql';
+import mysql from 'mysql2';
 
 const banco = mysql.createConnection({
     host: 'aws-sa-east-1.connect.psdb.cloud',
